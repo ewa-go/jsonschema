@@ -588,8 +588,17 @@ func (r *Reflector) addDefinition(definitions Definitions, t reflect.Type, s *Sc
 func (r *Reflector) refDefinition(_ Definitions, t reflect.Type) *Schema {
 	name := r.typeName(t)
 	return &Schema{
-		Ref: "#/$defs/" + name,
+		Ref: referencePrefix + name,
 	}
+}
+
+const defaultPrefix = "#/$defs/"
+
+var referencePrefix = defaultPrefix
+
+// SetReferencePrefix sets prefix for scheme reference. Default is '#/$defs'
+func SetReferencePrefix(prefix string) {
+	referencePrefix = prefix
 }
 
 func (r *Reflector) lookupID(t reflect.Type) ID {
