@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/invopop/jsonschema"
+	"github.com/mustan989/jsonschema"
 )
 
 type SampleUser struct {
