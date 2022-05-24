@@ -338,6 +338,7 @@ func (r *Reflector) reflectTypeToSchemaWithID(defs Definitions, t reflect.Type) 
 }
 
 func (r *Reflector) reflectTypeToSchema(definitions Definitions, t reflect.Type) *Schema {
+	r.DoNotReference = false
 	if r.Mapper != nil {
 		if t := r.Mapper(t); t != nil {
 			return t
@@ -405,6 +406,7 @@ func (r *Reflector) reflectTypeToSchema(definitions Definitions, t reflect.Type)
 		return rt
 
 	case reflect.Slice, reflect.Array:
+		r.DoNotReference = true
 		returnType := &Schema{}
 		if t == rawMessageType {
 			return &Schema{}
