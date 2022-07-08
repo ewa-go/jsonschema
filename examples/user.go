@@ -1,7 +1,7 @@
 package examples
 
 import (
-	"github.com/mustan989/jsonschema/examples/nested"
+	"github.com/ewa-go/jsonschema/examples/nested"
 )
 
 // User is used as a base to provide tests for comments.

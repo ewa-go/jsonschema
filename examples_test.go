@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/mustan989/jsonschema"
+	"github.com/ewa-go/jsonschema"
 )
 
 type SampleUser struct {

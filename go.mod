@@ -1,4 +1,4 @@
-module github.com/mustan989/jsonschema
+module github.com/ewa-go/jsonschema
 
 go 1.16
 

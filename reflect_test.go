@@ -15,7 +15,7 @@ import (
 
 	"github.com/iancoleman/orderedmap"
 
-	"github.com/mustan989/jsonschema/examples"
+	"github.com/ewa-go/jsonschema/examples"
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
